@@ -1,0 +1,24 @@
+# --------------------
+# github actions
+# --------------------
+
+name: github_action_for_ci
+
+on: 
+  push:
+    branches:
+    - main
+
+jobs:
+  my_build_the:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello message
+    run: echo "aaaa"
+    
+  
+  my_deploy_the:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Hello message
+    run: echo "bbbb"
