@@ -22,4 +22,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: second job
-      run: echo "$(w)"
+      run: echo "$(w)"]
