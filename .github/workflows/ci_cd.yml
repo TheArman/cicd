@@ -2,7 +2,7 @@
 # github actions
 # --------------------
 
-name: github-action-for-ci
+name: github-actions-for-ci-cd
 
 on:
   push:
@@ -10,16 +10,16 @@ on:
       - main
 
 jobs:
-  my_testing:
+  testing:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Print Hello message
-      run: echo "aaaa"
+    - name: first job
+      run: echo "$(curl "ipinfo.io/ip")"
     
   
-  my_deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Print Hello message
-      run: echo "bbbb"
+    - name: second job
+      run: echo "$(w)"
