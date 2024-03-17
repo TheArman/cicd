@@ -20,6 +20,8 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
+    needs: [testing]
+    
     steps:
     - name: second job
       run: echo "$(w)"]
