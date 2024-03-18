@@ -52,8 +52,12 @@ jobs:
     - name : this is local variable 
       run  : |
         echo "variable 1 = ${{ env.VAR1 }}"
-        echo "variable 2 = ${{ env.VAR2 }}"    
-    
+        echo "variable 2 = ${{ env.VAR2 }}"
+        echo "local var = $LOCAL_VAR"
+
+      env:
+        LOCAL_VAR: "this is local variable"
+      
     - name : deploy first job
       run  : echo "$(w)"]
 
