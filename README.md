@@ -2,6 +2,12 @@
 
 Status of Last Deployment:<br>
 
-![CI/CD](https://github.com/USERNAME/REPOSITORY_NAME/workflows/WORKFLOW_NAME/badge.svg)
+![CI/CD](https://github.com/TheArman/cicd/workflows/github-actions-for-ci-cd/badge.svg)
+
+
+
+
+
+
 
 Copyleft by TheArman
