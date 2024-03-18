@@ -6,7 +6,8 @@ name: github-actions-for-ci-cd
 env: 
   APPLICATION_NAME    : "RELAB"
   DEPLOY_PACKAGE_NAME : "first-deploy-version-${{ github.sha }}"
-
+name: qweqwe
+on: qwe
 on:
   push:
     branches:
@@ -15,7 +16,7 @@ on:
 jobs:
     
   testing:
-    runs-on: ubuntu-latestsad
+    runs-on: ubuntu-latest
     # needs: [deploy]
     
     steps:
