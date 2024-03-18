@@ -17,6 +17,7 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     # needs: [deploy]
+    
     steps:
     - name : testing first job
       run  : echo "$(curl "ipinfo.io/ip")"
@@ -35,12 +36,24 @@ jobs:
 
     - name : list of current directory 2
       run  : ls -la
+
+      
   deploy:
     runs-on : ubuntu-latest
+    
     needs   : 
     - testing
+
+    env:
+      VAR1 : "this is job level variable 1"
+      VAR2 : "this is job level variable 2"
     
     steps:
+    - name : this is local variable 
+      run  : |
+        echo "variable 1 = ${{ env.VAR1 }}"
+        echo "variable 2 = ${{ env.VAR2 }}"    
+    
     - name : deploy first job
       run  : echo "$(w)"]
 
@@ -52,4 +65,4 @@ jobs:
       run  : aws --version
 
     - name : lets test some packages if theye are here 2
-      run  : zip 
+      run  : zip --version
