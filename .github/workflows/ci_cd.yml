@@ -2,10 +2,6 @@
 # github actions
 # --------------------
 
-#name: name: on
-#on: on
-
-
 name: github-actions-for-ci-cd
 env: 
   APPLICATION_NAME    : "RELAB"
@@ -17,44 +13,41 @@ on:
       - main
   
 jobs:
-    
   testing:
     runs-on: ubuntu-latest
-    # needs: [deploy]
-    
+
     steps:
-    - name : testing first job
+    - name : Testing first job
       run  : echo "$(curl "ipinfo.io/ip")"
 
-    - name : testing second job
+    - name : Testing second job
       run  : |
         echo "testing 1"
         echo "testing 2"
         echo "application name is ${{ env.APPLICATION_NAME }}"
 
-    - name : list of current directory 1
+    - name : List of current directory 1
       run  : ls -la
 
-    - name : the git clone repository
+    - name : The git clone repository
       uses : actions/checkout@v1
 
-    - name : list of current directory 2
+    - name : List of current directory 2
       run  : ls -la
 
-      
   deploy:
-    runs-on : ubuntu-latest
+    runs-on: ubuntu-latest
     
-    needs   : 
-    - testing
+    needs:
+      - testing
 
     env:
-      VAR1 : "this is job level variable 1"
-      VAR2 : "this is job level variable 2"
+      VAR1: "this is job level variable 1"
+      VAR2: "this is job level variable 2"
     
     steps:
-    - name : this is local variable 
-      run  : |
+    - name: This is local variable 
+      run: |
         echo "variable 1 = ${{ env.VAR1 }}"
         echo "variable 2 = ${{ env.VAR2 }}"
         echo "local var = $LOCAL_VAR"
@@ -62,18 +55,21 @@ jobs:
       env:
         LOCAL_VAR: "this is local variable"
       
-    - name : deploy first job
-      run  : echo "$(w)"
+    - name: Deploy first job
+      run: echo "$(w)"
 
-    - name : deploy second job
-      run  : |
+    - name: Deploy second job
+      run: |
         echo "deploy 1"
         echo "see ${{ env.DEPLOY_PACKAGE_NAME }}"
         echo "$LOCAL_VAR"  
-    - name : lets test some packages if they are here 1
-      run  : aws --version
 
-    - name : lets test some packages if they are here 2
-      run  : zip --version
+    - name: Check if templates/main.html has changed
+      run: |
+        git diff --exit-code templates/main.html || (echo "Changes detected in templates/main.html. Aborting push." && exit 1)
 
-      
+    - name: Let's test some packages if they are here 1
+      run: aws --version
+
+    - name: Let's test some packages if they are here 2
+      run: zip --version
