@@ -6,8 +6,7 @@ name: github-actions-for-ci-cd
 env: 
   APPLICATION_NAME    : "RELAB"
   DEPLOY_PACKAGE_NAME : "first-deploy-version-${{ github.sha }}"
-name: qweqwe
-on: qwe
+
 on:
   push:
     branches:
