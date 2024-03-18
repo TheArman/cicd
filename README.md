@@ -3,7 +3,8 @@
 Status of Last Deployment:<br>
 
 
-<img src="https://github.com/TheArman/ci-cd/actions/workflows/github-actions-for-ci-cd/badge.svg?branch=main"><br>
+[![Workflow Status](https://github.com/TheArman/cicd/workflows/github-actions-for-ci-cd/badge.svg)](https://github.com/TheArman/cicd/actions)
+
 
 
 Copyleft by TheArman
