@@ -2,11 +2,6 @@
 # github actions
 # --------------------
 
-#name: name: on
-#on: on
-on : asdo 
-name: asodkpao
-
 name: github-actions-for-ci-cd
 env: 
   APPLICATION_NAME    : "RELAB"
