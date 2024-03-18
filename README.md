@@ -1,1 +1,81 @@
+# GitHub Actions for this Repository (CI/CD)
+
 Status of Last Deployment: ![Deployment Status](https://github.com/TheArman/ci-cd/workflows/ci_cd/badge.svg)
+
+Copyleft by TheArman
+
+ci-cd/.github/workflows/ci_cd.yml
+
+# --------------------
+# github actions
+# --------------------
+
+name: github-actions-for-ci-cd
+env: 
+  APPLICATION_NAME    : "RELAB"
+  DEPLOY_PACKAGE_NAME : "first-deploy-version-${{ github.sha }}"
+
+on:
+  push:
+    branches:
+      - main
+  
+jobs:
+    
+  testing:
+    runs-on: ubuntu-latest
+    # needs: [deploy]
+    
+    steps:
+    - name : testing first job
+      run  : echo "$(curl "ipinfo.io/ip")"
+
+    - name : testing second job
+      run  : |
+        echo "testing 1"
+        echo "testing 2"
+        echo "application name is ${{ env.APPLICATION_NAME }}"
+
+    - name : list of current directory 1
+      run  : ls -la
+
+    - name : the git clone repository
+      uses : actions/checkout@v1
+
+    - name : list of current directory 2
+      run  : ls -la
+
+      
+  deploy:
+    runs-on : ubuntu-latest
+    
+    needs   : 
+    - testing
+
+    env:
+      VAR1 : "this is job level variable 1"
+      VAR2 : "this is job level variable 2"
+    
+    steps:
+    - name : this is local variable 
+      run  : |
+        echo "variable 1 = ${{ env.VAR1 }}"
+        echo "variable 2 = ${{ env.VAR2 }}"
+        echo "local var = $LOCAL_VAR"
+
+      env:
+        LOCAL_VAR: "this is local variable"
+      
+    - name : deploy first job
+      run  : echo "$(w)"
+
+    - name : deploy second job
+      run  : |
+        echo "deploy 1"
+        echo "see ${{ env.DEPLOY_PACKAGE_NAME }}"
+        echo "$LOCAL_VAR"  
+    - name : lets test some packages if they are here 1
+      run  : aws --version
+
+    - name : lets test some packages if they are here 2
+      run  : zip --version
