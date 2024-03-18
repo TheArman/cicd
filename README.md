@@ -2,7 +2,7 @@
 
 Status of Last Deployment:<br>
 
-![CI/CD](https://github.com/TheArman/cicd/workflows/github-actions-for-ci-cd/badge.svg)
+![CI/CD](https://github.com/TheArman/cicd/workflows/github-actions-for-ci-cd/badge.svg?branch=main)
 
 
 
