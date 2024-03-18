@@ -1,8 +1,8 @@
-# GitHub Actions Part-1 Basics
+# github actions for this repository ----- cicd -----
 
 
 Status of Last Deployment:<br>
-<img src="https://github.com/thearman/cicd/workflows/github-actions-for-ci-cd/badge.svg?branch=master"><br>
+<img src="https://github.com/thearman/cicd/workflows/github-actions-for-ci-cd/badge.svg?branch=main"><br>
 
 
-Copyleft by Denis Astahov ADV-IT 2019.
+Copyleft by the arman
