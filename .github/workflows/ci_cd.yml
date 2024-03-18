@@ -67,6 +67,7 @@ jobs:
         echo "deploy 1"
         echo "see ${{ env.DEPLOY_PACKAGE_NAME }}"
         echo "$LOCAL_VAR"  
+        
     - name : lets test some packages if they are here 1
       run  : aws --version
 
