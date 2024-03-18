@@ -1,7 +1,8 @@
-# the github actions
+# GitHub Actions Part-1 Basics
 
-status of last delpoyment:<br>
 
-[![CI/CD Workflow](https://github.com/TheArman/cicd/workflows/github-actions-for-ci-cd/badge.svg?branch=main)](https://github.com/TheArman/cicd/actions)
+Status of Last Deployment:<br>
+<img src="https://github.com/thearman/cicd/workflows/github-actions-for-ci-cd/badge.svg?branch=master"><br>
 
-copyleft by the_arman
+
+Copyleft by Denis Astahov ADV-IT 2019.
