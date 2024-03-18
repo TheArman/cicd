@@ -50,7 +50,7 @@ jobs:
       VAR2 : "this is job level variable 2"
     
     steps:
-    - name : this is local variable 
+    - name : print env vrbs
       run  : |
         echo "variable 1 = ${{ env.VAR1 }}"
         echo "variable 2 = ${{ env.VAR2 }}"
