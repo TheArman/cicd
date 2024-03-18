@@ -2,7 +2,6 @@
 
 Status of Last Deployment:<br>
 
-
-![example branch parameter](https://github.com/github/TheArman/cicd/workflows/github-actions-for-ci-cd.yml/badge.svg?branch=main)
+![CI/CD](https://github.com/USERNAME/REPOSITORY_NAME/workflows/WORKFLOW_NAME/badge.svg)
 
 Copyleft by TheArman
