@@ -1,6 +1,8 @@
 # GitHub Actions for this Repository (CI/CD)
 
 Status of Last Deployment:<br>
-<img src="https://github.com/TheArman/cicd/workflows/github-actions-for-ci-cd/badge.svg?branch=main"><br>
+
+
+![example branch parameter](https://github.com/github/TheArman/cicd/workflows/cicd.yml/badge.svg?branch=main)
 
 Copyleft by TheArman
