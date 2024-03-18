@@ -59,14 +59,15 @@ jobs:
         LOCAL_VAR: "this is local variable"
       
     - name : deploy first job
-      run  : echo "$(w)"]
+      run  : echo "$(w)"
 
     - name : deploy second job
       run  : |
         echo "deploy 1"
         echo "see ${{ env.DEPLOY_PACKAGE_NAME }}"
-    - name : lets test some packages if theye are here 1
+        echo "$LOCAL_VAR"  
+    - name : lets test some packages if they are here 1
       run  : aws --version
 
-    - name : lets test some packages if theye are here 2
+    - name : lets test some packages if they are here 2
       run  : zip --version
