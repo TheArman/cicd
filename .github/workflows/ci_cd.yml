@@ -2,9 +2,6 @@
 # github actions
 # --------------------
 
-#name: name: on
-#on: on
-
 
 name: github-actions-for-ci-cd
 env: 
