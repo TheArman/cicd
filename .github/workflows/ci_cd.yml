@@ -1,7 +1,8 @@
 # --------------------
 # github actions
 # --------------------
-
+jandkasld kmaslkd mklasdm
+on: qweqweqweqwe
 name: github-actions-for-ci-cd
 env: 
   APPLICATION_NAME    : "RELAB"
