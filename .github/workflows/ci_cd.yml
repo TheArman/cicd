@@ -2,7 +2,7 @@
 # github actions
 # --------------------
 
-name: name
+
 name: github-actions-for-ci-cd
 env: 
   APPLICATION_NAME    : "RELAB"
